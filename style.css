@@ -1,42 +1,92 @@
 body {
-    margin: 0;
-    background-image: url("image/background.jfif");
-    background-repeat: no-repeat;
-    background-size: cover;
+  margin: 0;
+  background-image: url("image/background.jfif");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container {
-    background-color: white;
-    min-height: 100vh;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  background-color: white;
+  min-height: 100vh;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  position: relative;
 }
 
 .task-area{
-    border: 1px solid lightgrey;
+  border: 1px solid lightgrey;
 }
 
 .task-tabs{
-    display: flex;
-    border-bottom: 1px solid lightgrey;
-    position: relative;
+  display: flex;
+  border-bottom: 1px solid lightgrey;
+  position: relative;
 }
 
 .task-tabs div{
-    padding:1em;
+  padding:1em;
 }
 
 #under-line{
-    height: 4px;
-    background-color: pink;
-    position: absolute;
-    width: 80px;
-    left: 0px;
-    top: 52px;
-    padding: 0px;
+  height: 4px;
+  background-color: pink;
+  position: absolute;
+  width: 80px;
+  left: 0px;
+  top: 52px;
+  padding: 0px;
 }
 
 .task{
-    display: flex;
-    justify-content: space-between;
-    padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+}
+
+.task-done{
+  text-decoration: line-through;
+  background-color: lightgray;
+  flex-grow:1;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+  border : 0.5px solid rosybrown;
+}
+
+.task-done1{
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.5em;
+  flex-grow: 1;
+}
+
+.fa-check{
+  color: green;
+}
+
+.fa-trash{
+  color: red;
+}
+
+.fa-rotate-right{
+  color: black;
+}
+
+.box {
+  display: flex;
+}
+
+.box button{
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  height: 100%;
+  width: 4em;
+  margin:0;
+}
+
+.box button:first-child:hover{
+  background-color: greenyellow;
+}
+
+.box button:last-child:hover{
+  background-color: pink;
 }
