@@ -152,3 +152,13 @@ let Body = {
         document.querySelector('body').style.backgroundColor = color;
     }
 }
+
+function getToday(){
+let today = new Date();
+let year = today.getFullYear();
+let month = (today.getMonth() + 1).toString().padStart(2,'0');
+let date = today.getDate().toString().padStart(2,'0');
+let day = today.getDay();
+
+return year+"년"+month+"월"+date+"일"+day+"요일";
+}
