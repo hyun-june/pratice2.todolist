@@ -10,10 +10,13 @@
 </head>
 <body>
     <div class="container">
-        <h1>To Do List</h1>
         <section class="input-area">
-            <input type="text" id="task-input"/>
-            <button id="add-button">+</button>
+            <h1>To Do List</h1>
+            <input style="border:none" type="text" id="task-input" required/>
+            <label>&nbsp;Memo</label>
+            <span></span>
+            <button id="add-button"><i class="fa-solid fa-plus"></i></button>
+            <button id="clear-button"><i class="fa-solid fa-arrows-rotate"></i></button>
         </section>
         <section class="task-area">
             <div class="task-tabs">
@@ -32,7 +35,6 @@
         </div>
         </section>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>

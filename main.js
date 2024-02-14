@@ -11,13 +11,16 @@
 
 let taskInput = document.getElementById("task-input");
 let addButton = document.getElementById("add-button");
+let clearButton = document.getElementById("clear-button");
 let tabs = document.querySelectorAll(".task-tabs div");
 let underLine = document.getElementById("under-line");
 let taskList=[]
 let mode='all'
 let filterList =[];
+let taskBoard = document.getElementById("task-board");
 
 addButton.addEventListener("click",addTask);
+clearButton.addEventListener("click",clear);
 taskInput.addEventListener("keypress", function(event) {
     if(event.key === "Enter") {
         event.preventDefault();
@@ -25,9 +28,13 @@ taskInput.addEventListener("keypress", function(event) {
     }
 });
 
-
 for(let i=1;i<tabs.length;i++){
     tabs[i].addEventListener("click",function(event){filter(event)});
+}
+
+function clear(){
+    taskList=[];
+    taskBoard.textContent="";
 }
 
 function addTask(){
@@ -36,8 +43,8 @@ function addTask(){
         taskContent: taskInput.value,
         isComplete: false
     }
+    taskInput.value="";
     taskList.push(task);
-    console.log(taskList);
     render();
 }
 
@@ -93,6 +100,7 @@ function deleteTask(id){
             break;
         }
     }
+    taskInput.value="";
     filter();
 }
 
@@ -127,10 +135,20 @@ function filter(e){
             if(taskList[i].isComplete == true){
                 filterList.push(taskList[i]);
             }
-    } 
+    }
+    taskInput.value=""; 
 }render();
 }
 
 function randomID(){
     return '_' + Math.random().toString(36).substr(2, 9);
+}
+
+let Body = {
+    setColor: function (color) {
+        document.querySelector('body').style.color = color;
+    },
+    setBackgroundColor: function (color) {
+        document.querySelector('body').style.backgroundColor = color;
+    }
 }
