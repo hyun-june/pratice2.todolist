@@ -38,6 +38,11 @@ function clear(){
 }
 
 function addTask(){
+
+    if(taskInput.value == ""){
+        return alert("내용을 입력하세요");
+    }
+
         let task = {
         id:randomID(),
         taskContent: taskInput.value,
